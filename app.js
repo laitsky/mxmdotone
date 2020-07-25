@@ -4,10 +4,11 @@ const cors = require('cors');
 const morgan = require('morgan');
 const config = require('./utils/config');
 const middleware = require('./utils/middleware');
+const Shortener = require('./models/shortener');
+const shortenersRouter = require('./controller/shorteners');
+const logger = require('./utils/logger');
 
 const app = express();
-const logger = require('./utils/logger');
-const shortenersRouter = require('./controller/shorteners');
 
 logger.info('connecting to', config.MONGODB_URI);
 
@@ -20,8 +21,18 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
   res.redirect('https://maxima.umn.ac.id');
+});
+
+app.get('/:shortUrl', async (req, res) => {
+  const { shortUrl } = req.params;
+  const result = await Shortener.findOne({ short_url: shortUrl });
+  if (result) {
+    res.redirect(result.original_url);
+  } else {
+    res.status(404).json({ message: "link doesn't exists" });
+  }
 });
 /* router placed below */
 app.use('/api/shorteners', shortenersRouter);
