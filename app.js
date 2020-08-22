@@ -12,7 +12,11 @@ const app = express();
 
 logger.info('connecting to', config.MONGODB_URI);
 
-mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose
+  .connect(config.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => logger.info('connected to MongoDB'))
   .catch((err) => logger.error(err.message));
 
@@ -20,9 +24,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
+app.use(express.static('public'))
 
 app.get('/', (req, res) => {
   res.redirect('https://maxima.umn.ac.id');
+});
+
+app.get('/twibbon', (req, res) => {
+  res.sendFile(`${__dirname}/public/index.html`);
 });
 
 app.get('/:shortUrl', async (req, res) => {

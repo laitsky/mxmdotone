@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'canaro-bold';
+    src: url("../fonts/canaro_bold/CanaroW00-Bold.eot");
+    src: url("../fonts/canaro_bold/CanaroW00-Bold.woff") format("woff"),
+    url("../fonts/canaro_bold/CanaroW00-Bold.ttf") format("truetype"),
+    url("../fonts/canaro_bold/CanaroW00-Bold.svg") format("svg");
+  }
+  @font-face {
+    font-family: "canaro-medium";
+    src: url("../fonts/canaro_medium/CanaroW00-Medium.eot");
+    src: url("../fonts/canaro_medium/CanaroW00-Medium.woff") format("woff"),
+    url("../fonts/canaro_medium/CanaroW00-Medium.ttf") format("truetype"),
+    url("../fonts/canaro_medium/CanaroW00-Medium.svg") format("svg");
+  }
+
+  html, body {
+      background-image: url("../images/bgpattern.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'canaro-bold';
+  }
+
+.MxmButton{
+    font-family: 'canaro-bold';
+    font-weight: 900;
+    font-size: 1em;
+    color: #f4224b;
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 50px;
+    padding: 0.5em 2.5em 0.5em 2.5em;
+    background-color: #ffd008;
+    border: none;
+    transition-duration: 0.2s;
+    box-shadow: 0 5px #f4224b;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.MxmButton:hover{
+    cursor: pointer;
+    background-color: #e3bd1b;
+    transform: translateY(2.5px);
+    box-shadow: 0 2.5px #f4224b;
+}
+
+.MxmButton:active{
+    transform: translateY(5px);
+    box-shadow: 0 0 #f4224b;
+}
+
+.MxmCancelButton{
+  outline: none;
+  font-family: 'canaro-medium';
+  font-weight: 900;
+  font-size: 1em;
+  color: #f4224b;
+  border-radius: 50px;
+  background-color: white;
+  padding: 0.5em 2.5em 0.5em 2.5em;
+  border: solid #f4224b;
+  transition-duration: 0.2s;
+}
+
+.MxmCancelButton:hover{
+    background-color: #f4224b;
+    color: #ffd008;
+    cursor: pointer;
+}
+
+.MxmCancelButton:active{
+    background-color: #c41d3e;
+    border-color: #c41d3e;
+}
+
+.judul{
+    color: #f4224b;
+    font-size: 46px;
+    background-color: none;
+}
+
+.left-line{
+    border: 4px solid #f4224b;
+    width: 50px;
+    margin: 0 15px 0 15px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.archi-tou-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-line{
+    border: 4px solid #f4224b;
+    width: 50px;
+    margin: 0 15px 0 15px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
