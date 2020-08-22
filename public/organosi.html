@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/mxm20_title_icon.png" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.7/cropper.css"
+      integrity="sha512-AuLN6bHjJzqZ+Iw48+GdQPp5uKBdPX6+zWV37ju9zw7XIrevIX01RsLtpTU/zCoQcKrQRPe/EpwDpZiv7OUYMA=="
+      crossorigin="anonymous"
+    />
+    <title>Archi Tou Organosi - Twibbon MAXIMA 2020</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner-container">
+        <a href="https://mxm.one"
+          ><img src="assets/images/mxm20-logo.png" width="100px"
+        /></a>
+
+        <p>
+          Ayo ceritakan dan tunjukkan pengalaman serumu dengan memakai Twibbon
+          ini!
+        </p>
+
+        <div class="prev-twibbon">
+          <div>
+            <div class="archi-tou-container">
+              <span class="left-line"></span>
+              <h2 class="archi-tou">ARCHI TOU</h2>
+              <span class="right-line"></span>
+            </div>
+            <span class="judul">ORGANOSI</span>
+          </div>
+          <h3>
+            Organisasi & Himpunan Mahasiswa
+          </h3>
+        </div>
+        <div>
+          <div class="attachment attachment-1" id="choose_photo">
+            <label for="attachment">Pilih Foto</label>
+            <input
+              type="file"
+              id="attachment"
+              name="attachment"
+              accept="image/*"
+              required=""
+            />
+          </div>
+          <div>
+            <canvas id="canvas">
+              Your browser does not support the HTML5 canvas element.
+            </canvas>
+            <canvas id="canvas2" hidden>
+              Your browser does not support the HTML5 canvas element.
+            </canvas>
+            <div id="operations" class="button-container">
+              <button
+                type="button"
+                class="MxmButton"
+                id="btnCrop"
+                style="margin: 0 5px 0 0"
+              >
+                Crop
+              </button>
+              <button
+                type="button"
+                class="MxmCancelButton"
+                id="btnReset"
+                onclick="reload_page()"
+                style="margin: 0 0 0 5px"
+              >
+                Ganti Foto
+            </button>
+            </div>
+          </div>
+          <div class="col-md-12" hidden>
+            <img
+              src="./assets/images/organosi.png"
+              width="1024"
+              height="1024"
+              id="twibbon"
+            />
+          </div>
+          <div id="result">
+            <img id="res" />
+          </div>
+          <div style="margin: 1em 0 1em 0">
+            <button id="download_btn" class="MxmButton" hidden>
+              <a id="download_anchor" download="Twibbon_MAXIMA2020.png"
+                >Unduh!</a>
+            </button>
+          </div>
+        </div>
+
+        <div class="new-download">
+          <a href="" class="btn MxmCancelButton">Ganti Foto</a>
+        </div>
+
+        <h2>Gunakan caption di bawah ini</h2>
+        <div class="make-it-center">
+          <textarea class="js-copytextarea" id="js-copytextarea" readonly>      Halo, MAXIMERS! Saya (nama), siap untuk berpetualang bersama (nama organisasi, bisa lebih dari satu) dan mengikuti rangkaian #MAXIMA2020. Saya tertarik dengan organisasi ini karena (alasan memilih organisasi).
+
+      Selama karantina, saya (sebutkan 3 pengalaman paling mengesankan selama karantina).
+                            
+#HoME2020
+#PaveYourOwnJourney</textarea>
+          <button class="js-textareacopybtn" onclick="copyCaption()">Copy All</button>
+        </div>
+      </div>
+      <div class="footer">
+        <p>© Dikelola oleh Public Relations MAXIMA 2020</p>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-1.11.2.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.7/cropper.js"
+      integrity="sha512-giNJUOlLO0dY67uM6egCyoEHV/pBZ048SNOoPH4d6zJNnPcrRkZcxpo3gsNnsy+MI8hjKk/NRAOTFVE/u0HtCQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery-cropper@1.0.1/dist/jquery-cropper.min.js"
+      integrity="sha256-vTzm6F75vgr6xSaZEqvxtFSsTmT3nXzJFgTjpfoBA+0="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function reload_page() {
+        window.location.reload();
+        return false;
+      }
+      var canvas = $("#canvas"),
+        context = canvas.get(0).getContext("2d"),
+        $result = $("#result");
+      $("#canvas").hide();
+      $("#canvas2").hide();
+      $("#operations").hide();
+      $("#attachment").on("change", function () {
+        if (this.files && this.files[0]) {
+          if (this.files[0].type.match(/^image\//)) {
+            $("#choose_photo").hide();
+            $("#canvas").show();
+            $("#operations").show();
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+              var img = new Image();
+              img.onload = function () {
+                context.canvas.height = img.height;
+                context.canvas.width = img.width;
+                context.drawImage(img, 0, 0);
+                var cropper = canvas.cropper({
+                  aspectRatio: 1 / 1,
+                  viewMode: 2,
+                });
+                $("#btnCrop").click(function () {
+                  // Get a string base 64 data url
+                  //asli
+                  var croppedImageDataURL = canvas
+                    .cropper("getCroppedCanvas")
+                    .toDataURL("image/png");
+                  $result.append($("#res").attr("src", croppedImageDataURL));
+                  //end of asli
+                  var canvas2 = document.getElementById("canvas2");
+                  var context2 = canvas2.getContext("2d");
+                  var image1 = new Image();
+                  image1.src = document
+                    .getElementById("res")
+                    .getAttribute("src");
+                  image1.width = 1024;
+                  image1.height = 1024;
+                  var image2 = document.getElementById("twibbon");
+                  canvas2.width = 1024;
+                  canvas2.height = 1024;
+                  image1.onload = function () {
+                    context2.drawImage(image1, 0, 0, 1024, 1024);
+                    context2.drawImage(image2, 0, 0, 1024, 1024);
+                    var save_img = canvas2.toDataURL();
+                    console.log("image url", save_img);
+                    document
+                      .getElementById("res")
+                      .setAttribute("src", save_img);
+                    document
+                      .getElementById("download_btn")
+                      .removeAttribute("hidden");
+                    document
+                      .getElementById("download_anchor")
+                      .setAttribute("href", save_img);
+                  };
+                });
+                $("#btnRestore").click(function () {
+                  canvas.cropper("reset");
+                  $result.empty();
+                });
+              };
+              img.src = evt.target.result;
+            };
+            reader.readAsDataURL(this.files[0]);
+          } else {
+            alert("Invalid file type! Please select an image file.");
+          }
+        } else {
+          alert("No file(s) selected.");
+        }
+      });
+
+      $("#btnReset").on("change", function () {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      });
+
+      function copyCaption() {
+        var copyText = document.getElementById("js-copytextarea");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+      }
+    </script>
+  </body>
+</html>

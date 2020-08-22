@@ -30,8 +30,29 @@ app.get('/', (req, res) => {
 });
 app.use(express.static('public'));
 
-app.get('/twibbon', (req, res) => {
-  res.sendFile(`${__dirname}/public/index.html`);
+app.get('/twibbon-athlima', (req, res) => {
+  res.sendFile(`${__dirname}/public/athlima.html`);
+});
+app.get('/twibbon-drastiriotites', (req, res) => {
+  res.sendFile(`${__dirname}/public/drastiriotites.html`);
+});
+app.get('/twibbon-koinonikes', (req, res) => {
+  res.sendFile(`${__dirname}/public/koinonikes.html`);
+});
+app.get('/twibbon-koinotita', (req, res) => {
+  res.sendFile(`${__dirname}/public/koinotita.html`);
+});
+app.get('/twibbon-lydryma', (req, res) => {
+  res.sendFile(`${__dirname}/public/lydryma.html`);
+});
+app.get('/twibbon-mesou', (req, res) => {
+  res.sendFile(`${__dirname}/public/mesou.html`);
+});
+app.get('/twibbon-organosi', (req, res) => {
+  res.sendFile(`${__dirname}/public/organosi.html`);
+});
+app.get('/twibbon-techni', (req, res) => {
+  res.sendFile(`${__dirname}/public/techni.html`);
 });
 
 app.get('/:shortUrl', async (req, res) => {

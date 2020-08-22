@@ -6,7 +6,6 @@
     <link rel="icon" href="assets/images/mxm20_title_icon.png" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/techni.css" />
 
     <link
       rel="stylesheet"
@@ -14,7 +13,7 @@
       integrity="sha512-AuLN6bHjJzqZ+Iw48+GdQPp5uKBdPX6+zWV37ju9zw7XIrevIX01RsLtpTU/zCoQcKrQRPe/EpwDpZiv7OUYMA=="
       crossorigin="anonymous"
     />
-    <title>Twibbon MAXIMA 2020</title>
+    <title>Archi Tou Techni - Twibbon MAXIMA 2020</title>
   </head>
   <body>
     <div class="container">
@@ -59,12 +58,13 @@
             <canvas id="canvas2" hidden>
               Your browser does not support the HTML5 canvas element.
             </canvas>
-            <div id="operations">
+            <div id="operations" style="margin: 10px 0 1em 0">
               <input
                 type="button"
                 class="btn MxmButton"
                 id="btnCrop"
                 value="Crop"
+                style="margin: 0 0 5px 0"
               />
               <input
                 type="button"
@@ -85,7 +85,9 @@
           </div>
           <div id="result">
             <img id="res" />
-            <button id="download_btn" hidden>
+          </div>
+          <div style="margin: 1em 0 1em 0">
+            <button id="download_btn" class="MxmButton" hidden>
               <a id="download_anchor" download="Twibbon_MAXIMA2020.png"
                 >Unduh!</a
               >
@@ -98,17 +100,14 @@
         </div>
 
         <h2>Gunakan caption di bawah ini</h2>
-        <div>
-          <textarea class="js-copytextarea">
-              Halo, MAXIMERS! Saya (nama), siap untuk berpetualang bersama (nama organisasi, bisa lebih dari satu) dan mengikuti rangkaian #MAXIMA2020. Saya tertarik dengan organisasi ini karena (alasan memilih organisasi).
+        <div class="make-it-center">
+          <textarea class="js-copytextarea" id="js-copytextarea" readonly>      Halo, MAXIMERS! Saya (nama), siap untuk berpetualang bersama (nama organisasi, bisa lebih dari satu) dan mengikuti rangkaian #MAXIMA2020. Saya tertarik dengan organisasi ini karena (alasan memilih organisasi).
 
-              Selama karantina, saya (sebutkan 3 pengalaman paling mengesankan selama karantina).
+      Selama karantina, saya (sebutkan 3 pengalaman paling mengesankan selama karantina).
                             
-              #HoME2020
-              #PaveYourOwnJourney
-            </textarea
-          >
-          <button class="js-textareacopybtn">Copy All</button>
+#HoME2020
+#PaveYourOwnJourney</textarea>
+          <button class="js-textareacopybtn" onclick="copyCaption()">Copy All</button>
         </div>
       </div>
       <div class="footer">
@@ -211,6 +210,13 @@
       $("#btnReset").on("change", function () {
         context.clearRect(0, 0, canvas.width, canvas.height);
       });
+
+      function copyCaption() {
+        var copyText = document.getElementById("js-copytextarea");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+      }
     </script>
   </body>
 </html>
