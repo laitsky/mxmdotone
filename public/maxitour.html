@@ -1,0 +1,1849 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/mxm20_title_icon.png" />
+
+    <title>MAXITOUR - MAXIMA 2020</title>
+    <link rel="stylesheet" href="pannellum.css"/>
+    <script type="text/javascript" src="pannellum.js"></script>
+    <style>
+	* { font-family: montserrat; font-size: 10pt; COLOR: dark gray; 
+	}
+	b { font-weight: bold;	}
+    </style>
+    
+</head>
+<body>
+    <div class="fit-container">
+        <a href="https://maxima.umn.ac.id" style="text-align: center;" tabindex="-1"><img src="assets/images/mxm20-logo.png" class="maxitour-logo"/></a>
+        <span class="maxitour-text">MAXITOUR</span>
+      <div id="panorama"></div>
+      <script>
+      pannellum.viewer('panorama', {   
+          "default": {
+              "firstScene": "gambar000",
+              "sceneFadeDuration": 1000
+          },
+      
+          "scenes": {
+              "gambar000": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": -60,
+                  "type": "equirectangular",
+                  "panorama": "img/000-0.png",
+                  "autoLoad": true,
+                  "autoRotate": -15,
+                  "autoRotateInactivityDelay": 3000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 120,
+                          "type": "scene",
+                          "text": "start here",
+                          "sceneId": "gambar00"
+                      }
+                      
+                  ]
+              },
+          
+              "gambar00": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 90,
+                  "type": "equirectangular",
+                  "panorama": "img/000-1.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 3000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 10,
+                          "type": "scene",
+                          "text": "home?",
+                          "sceneId": "gambar01"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 170,
+                          "type": "scene",
+                          "text": "Lobby A",
+                          "sceneId": "gambar000",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                      
+                  ]
+              },
+      
+              "gambar01": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 68,
+                  "type": "equirectangular",
+                  "panorama": "img/000-2.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 3000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 10,
+                          "type": "scene",
+                          "text": "enter",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 68,
+                          "type": "scene",
+                          "text": "Lobby A",
+                          "sceneId": "gambar000",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": -100,
+                          "type": "scene",
+                          "text": "exit",
+                          "sceneId": "gambar27",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+      
+              "gambar02": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/000-3.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 3000,
+                  "hotSpots": [
+                      {
+                          "pitch": -14,
+                          "yaw": 25,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar03",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 6,
+                          "type": "scene",
+                          "text": "STAGE?",
+                          "sceneId": "gambar03",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -2,
+                          "yaw": -7,
+                          "type": "info",
+                          "text": "MAXIMA",
+                          "URL": "http://maxima.umn.ac.id"
+                      },
+                      {
+                          "pitch": -10,
+                          "yaw": 0,
+                          "type": "info",
+                          "text": "you're here!",
+                      },
+                      {
+                          "pitch": 2,
+                          "yaw": -20,
+                          "type": "info",
+                          "text": "buy merch!",
+                          "URL": "https://www.instagram.com/maximerch2020/"
+                      },
+                      {
+                          "pitch": -4,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "Exhibit 001-008",
+                          "sceneId": "gambar04",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "Exhibit 009-018",
+                          "sceneId": "gambar06",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 8,
+                          "yaw": -2,
+                          "type": "scene",
+                          "text": "Exhibit 019-028",
+                          "sceneId": "gambar09",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 6,
+                          "yaw": -12,
+                          "type": "scene",
+                          "text": "Exhibit 029-038",
+                          "sceneId": "gambar12",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": -4,
+                          "type": "scene",
+                          "text": "Exhibit 039-048",
+                          "sceneId": "gambar15",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -10,
+                          "yaw": -5,
+                          "type": "scene",
+                          "text": "Exhibit 049-058",
+                          "sceneId": "gambar19",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -10,
+                          "yaw": -15,
+                          "type": "scene",
+                          "text": "Exhibit 059-068",
+                          "sceneId": "gambar23",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": -85,
+                          "type": "scene",
+                          "text": "Gate HOME",
+                          "sceneId": "gambar01",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -5,
+                          "yaw": -23,
+                          "type": "scene",
+                          "text": "exit",
+                          "sceneId": "gambar27",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 6,
+                          "yaw": -15,
+                          "type": "scene",
+                          "text": "MaxInfo",
+                          "sceneId": "gambar25",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                  ]
+              },
+      
+              "gambar03": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/000-4.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": -13,
+                          "yaw": -29,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -15,
+                          "yaw": 8,
+                          "type": "scene",
+                          "text": "Exhibit 001-008",
+                          "sceneId": "gambar04",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                  ]
+              },
+      
+              "gambar04": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/001.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -70,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -40,
+                          "type": "info",
+                          "text": "Ultima Sonora",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/ultima-sonora"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -30,
+                          "type": "info",
+                          "text": "Teater Katak",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/teater-katak"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -10,
+                          "type": "info",
+                          "text": "Tracce",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/tracce"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 15,
+                          "type": "info",
+                          "text": "J-Cafe",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/j-cafe"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 30,
+                          "type": "info",
+                          "text": "Qorie",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/qorie"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 40,
+                          "type": "info",
+                          "text": "Obscura",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/obscura"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar05",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -20,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar03",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+      
+              "gambar05": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/001-1.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -70,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -40,
+                          "type": "info",
+                          "text": "Qorie",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/qorie"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -30,
+                          "type": "info",
+                          "text": "Obscura",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/obscura"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -10,
+                          "type": "info",
+                          "text": "Let's Dance",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/let%E2%80%99s-dance"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 15,
+                          "type": "info",
+                          "text": "UMN Simphony Orchestra",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-symphony-orchestra-(uso)"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar06",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar04",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+      
+              "gambar06": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/002.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -70,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 15,
+                          "yaw": 15,
+                          "type": "info",
+                          "text": "Mufomic",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/mufomic"
+                      },
+                      {
+                          "pitch": 15,
+                          "yaw": -12,
+                          "type": "info",
+                          "text": "Ultima Toys",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/ultima-toys"
+                      },
+                      {
+                          "pitch": 15,
+                          "yaw": -22,
+                          "type": "info",
+                          "text": "Rencang",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/rencang"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -40,
+                          "type": "info",
+                          "text": "Mapala UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/mapala"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar07",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -20,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar05",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+      
+              "gambar07": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/002-1.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 80,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 38,
+                          "type": "info",
+                          "text": "Rencang",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/rencang"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "Mapala UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/mapala"
+                      },
+                      {
+                          "pitch": 12,
+                          "yaw": 10,
+                          "type": "info",
+                          "text": "Game Development CLub",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/game-development-club-(gdc)"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -12,
+                          "type": "info",
+                          "text": "UMN English Student Council",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-english-student-council-(uesc)"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -20,
+                          "type": "info",
+                          "text": "AIESEC",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/AIESEC"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -38,
+                          "type": "info",
+                          "text": "UMN Programming Club",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-programming-club-(umn-pc)"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar08",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar06",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+      
+              "gambar08": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/003.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -70,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 40,
+                          "type": "info",
+                          "text": "AIESEC",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/AIESEC"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 21,
+                          "type": "info",
+                          "text": "UMN Programming Club",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-programming-club-(umn-pc)"
+                      },
+                      {
+                          "pitch": 12,
+                          "yaw": 13,
+                          "type": "info",
+                          "text": "LIONS Basket",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/lions-basket"
+                      },
+                      {
+                          "pitch": 12,
+                          "yaw": -11,
+                          "type": "info",
+                          "text": "LIONS Futsal",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/lions-futsal"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar09",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar07",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar09": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/004.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -70,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 38,
+                          "type": "info",
+                          "text": "LIONS Badminton",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/lions-badminton"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "LIONS VOLI",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/teater-katak"
+                      },
+                      {
+                          "pitch": 12,
+                          "yaw": 11,
+                          "type": "info",
+                          "text": "Capoeira",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/capoeira"
+                      },
+                      {
+                          "pitch": 11,
+                          "yaw": -10,
+                          "type": "info",
+                          "text": "Ultimatum Taekwondo",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/ultimatum-taekwondo"
+                      },
+                      {
+                          "pitch": 12,
+                          "yaw": -20,
+                          "type": "info",
+                          "text": "UMN Softball Team",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-softball-team"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -38,
+                          "type": "info",
+                          "text": "Tennis Meja",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/tenis-meja"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar10",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar08",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar10": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/005.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 125,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 40,
+                          "type": "info",
+                          "text": "UMN Softball Team",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-softball-team"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "Tennis Meja",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/tenis-meja"
+                      },
+                      {
+                          "pitch": 12,
+                          "yaw": 11,
+                          "type": "info",
+                          "text": "Spectre",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/spectre"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -12,
+                          "type": "info",
+                          "text": "Fortius",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/fortius-esports"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -20,
+                          "type": "info",
+                          "text": "Ultima Aikido UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/ultima-aikido"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -38,
+                          "type": "info",
+                          "text": "Lions Floorball",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/lions-floorball"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar11",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar09",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar11": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/006.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 160,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar12",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar10",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+      
+              "gambar12": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/007.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -175,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 38,
+                          "type": "info",
+                          "text": "Shinkendo",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/ultima-sonora"
+                      },
+                      {
+                          "pitch": 12,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "KOKONAT",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/kokonat"
+                      },
+                      {
+                          "pitch": 14,
+                          "yaw": 11,
+                          "type": "info",
+                          "text": "Ikatan Bikers UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/ikatan-bikers-umn"
+                      },
+                      {
+                          "pitch": 13,
+                          "yaw": -10,
+                          "type": "info",
+                          "text": "Social Designee",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/social-designee"
+                      },
+                      {
+                          "pitch": 14,
+                          "yaw": -20,
+                          "type": "info",
+                          "text": "UMN Boardgame",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-board-game"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -38,
+                          "type": "info",
+                          "text": "UMN Robotic Club",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-robotic-club"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar13",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar11",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar13": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/008.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 160,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 38,
+                          "type": "info",
+                          "text": "UMN Boardgame",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-board-game"
+                      },
+                      {
+                          "pitch": 12,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "UMN Robotic Club",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-robotic-club"
+                      },
+                      {
+                          "pitch": 11,
+                          "yaw": 13,
+                          "type": "info",
+                          "text": "Galeri FSD",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/galeri-fsd"
+                      },
+                      {
+                          "pitch": 12,
+                          "yaw": -11,
+                          "type": "info",
+                          "text": "Popsicle UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/popsicle"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -23,
+                          "type": "info",
+                          "text": "UMN Gate",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-gate"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -38,
+                          "type": "info",
+                          "text": "Kelompok Studi Pasar Modal",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/kelompok-studi-pasar-modal-(kspm)"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar14",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar12",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar14": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/009.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -37,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar15",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar13",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar15": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/010-1.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 170,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar16",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar14",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar16": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/010.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      
+                      {
+                          "pitch": 0,
+                          "yaw": -45,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 8,
+                          "yaw": -38,
+                          "type": "info",
+                          "text": "Dewan Keluarga Besar Mahasiswa UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/dkbm-"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -20,
+                          "type": "info",
+                          "text": "Badan Eksekutif Mahasiswa UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/bem-umn"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -10,
+                          "type": "info",
+                          "text": "Komisi Pemilihan Umum UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/kpu-umn"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 12,
+                          "type": "info",
+                          "text": "I'M KOM",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/i'm-kom"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Manajemen",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/himma"
+                      },
+                      {
+                          "pitch": 9,
+                          "yaw": 38,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Akuntansi UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/himtara"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar17",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar15",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar17": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/011.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -70,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 9,
+                          "yaw": -38,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Manajemen",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/himma"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -20,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Akuntansi UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/himtara"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -11,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Perhotelan",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/hmp"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 12,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Desain Komunikasi Visual",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/hmdkv"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Film",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/qorie"
+                      },
+                      {
+                          "pitch": 9,
+                          "yaw": 38,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Arsitektur",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/himars"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar18",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar16",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar18": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/012.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -100,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar19",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar17",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+      
+              "gambar19": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/013.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -150,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 8,
+                          "yaw": -37,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Informatika",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/hmif"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -20,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Sistem Informasi",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/himsi"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -11,
+                          "type": "info",
+                          "text": "Himpunan Mahasiswa Teknik Fisika dan Teknik Elektro UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/himfera"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 10,
+                          "type": "info",
+                          "text": "Association of Computer Engineering Students",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/aces"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "Mr. & Ms. UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/mr-&-mrs-umn"
+                      },
+                      {
+                          "pitch": 9,
+                          "yaw": 36,
+                          "type": "info",
+                          "text": "UMN Medical Center",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-medical-center"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar20",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar18",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar20": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/014.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -70,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 8,
+                          "yaw": -37,
+                          "type": "info",
+                          "text": "Mr. & Ms. UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/mr-&-mrs-umn"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -20,
+                          "type": "info",
+                          "text": "UMN Medical Center",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-medical-center"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -11,
+                          "type": "info",
+                          "text": "U-STORE",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/u-store"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 11,
+                          "type": "info",
+                          "text": "U-Biz",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/u-biz"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "Duta Anti Narkoba",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/duta-anti-narkoba"
+                      },
+                      {
+                          "pitch": 9,
+                          "yaw": 38,
+                          "type": "info",
+                          "text": "Kompas Corner",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/kompas-corner"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar21",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar19",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar21": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/014-1.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 32,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar22",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar20",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar22": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/015.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -170,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar23",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar21",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar23": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/016.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -70,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 8,
+                          "yaw": -37,
+                          "type": "info",
+                          "text": "Rumpin",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/rumpin"
+                      },
+                      {
+                          "pitch": 11,
+                          "yaw": -21,
+                          "type": "info",
+                          "text": "Skystar Ventures",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/skystar-ventures"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -10,
+                          "type": "info",
+                          "text": "Fly UMN",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/fly-umn"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 11,
+                          "type": "info",
+                          "text": "Bank Sampah",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/bank-sampah"
+                      },
+                      {
+                          "pitch": 9,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "UMN TV",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-tv"
+                      },
+                      {
+                          "pitch": 8,
+                          "yaw": 36,
+                          "type": "info",
+                          "text": "UMN Radio",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-radio"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar24",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar22",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar24": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/017.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -80,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 8,
+                          "yaw": -37,
+                          "type": "info",
+                          "text": "UMN TV",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-tv"
+                      },
+                      {
+                          "pitch": 11,
+                          "yaw": -21,
+                          "type": "info",
+                          "text": "UMN Radio",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-radio"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -10,
+                          "type": "info",
+                          "text": "Ultimagz",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/ultimagz"
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": 11,
+                          "type": "info",
+                          "text": "UMN JUICE",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-juice"
+                      },
+                      {
+                          "pitch": 9,
+                          "yaw": 20,
+                          "type": "info",
+                          "text": "Masterpiece",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/masterpiece"
+                      },
+                      {
+                          "pitch": 8,
+                          "yaw": 36,
+                          "type": "info",
+                          "text": "UMN Documentation",
+                          "URL": "https://maxima.umn.ac.id/home/detail-organisator/umn-documentation"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar25",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar23",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+              
+              "gambar25": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/018.png",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -70,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -5,
+                          "yaw": 10,
+                          "type": "info",
+                          "text": "Get Your MaxiMerch !",
+                          "URL": "https://www.instagram.com/maximerch2020/"
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar26",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "previous",
+                          "sceneId": "gambar24",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+      
+              "gambar26": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 0,
+                  "type": "equirectangular",
+                  "panorama": "img/019.png",
+                  "autoLoad": true,
+                  "autoRotate": -5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": -10,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 10,
+                          "yaw": -25,
+                          "type": "scene",
+                          "text": "MaxiMerch",
+                          "sceneId": "gambar25",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": -25,
+                          "yaw": 0,
+                          "type": "scene",
+                          "text": "next",
+                          "sceneId": "gambar27",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      }
+                  ]
+              },
+                      
+              "gambar27": {
+                  "hfov": 110,
+                  "pitch": 0,
+                  "yaw": 170,
+                  "type": "equirectangular",
+                  "panorama": "img/020.jpg",
+                  "autoLoad": true,
+                  "autoRotate": +5,
+                  "autoRotateInactivityDelay": 5000,
+                  "hotSpots": [
+                      {
+                          "pitch": 0,
+                          "yaw": 40,
+                          "type": "scene",
+                          "text": "Maximap!",
+                          "sceneId": "gambar03",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                      {
+                          "pitch": 0,
+                          "yaw": 170,
+                          "type": "scene",
+                          "text": "Gate HOME",
+                          "sceneId": "gambar02",
+                          "targetYaw": 0,
+                          "targetPitch": 0
+                      },
+                  ]
+              }
+      
+          }
+      });
+      </script>
+      <br/>
+      <div class="maxitour-footer">
+          <a href="https://maxima.umn.ac.id"><button onclick="backtoMaxima()"><img src="assets/images/back.png"/>KEMBALI KE MAXIMA.UMN.AC.ID</button></a>
+      </div>
+</body>
+</html>

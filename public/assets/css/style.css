@@ -1,1 +1,275 @@
-@font-face{font-family:canaro-bold;src:url(../fonts/canaro_bold/CanaroW00-Bold.eot);src:url(../fonts/canaro_bold/CanaroW00-Bold.woff) format("woff"),url(../fonts/canaro_bold/CanaroW00-Bold.ttf) format("truetype"),url(../fonts/canaro_bold/CanaroW00-Bold.svg) format("svg")}@font-face{font-family:canaro-medium;src:url(../fonts/canaro_medium/CanaroW00-Medium.eot);src:url(../fonts/canaro_medium/CanaroW00-Medium.woff) format("woff"),url(../fonts/canaro_medium/CanaroW00-Medium.ttf) format("truetype"),url(../fonts/canaro_medium/CanaroW00-Medium.svg) format("svg")}body,html{background-image:url(../images/maxima-bg.png);background-repeat:no-repeat;background-position:top center;background-size:cover;background-attachment:fixed;font-family:canaro-bold}canvas,img{max-width:100%;height:auto!important;margin:auto}canvas{display:inline-block;vertical-align:baseline}h2{font-size:20px;color:#1f2c4c;font-family:canaro-medium}h3{font-size:20px;color:#fff;font-family:canaro-medium;border-radius:45px;background-color:#ed2d4f;padding:10px}.container{padding:45px 20px;color:#fff}.inner-container{max-width:500px;margin:auto;text-align:center}#attachment{display:none}.attachment label{font-family:canaro-medium;font-weight:900;box-sizing:border-box;background-color:#ffd008;border-radius:50px;transition-duration:.2s;box-shadow:0 5px #f4224b;color:#f4224b;font-size:medium;padding:.5em 2.5em .5em 2.5em;display:inline-block;margin:50px 0;cursor:pointer}.attachment label:hover{cursor:pointer;background-color:#e3bd1b;transform:translateY(2.5px);box-shadow:0 2.5px #f4224b}.attachment label:active{transform:translateY(5px);box-shadow:0 0 #f4224b}.new-download{display:none}.js-textareacopybtn{font-family:canaro-medium;font-weight:900;font-size:1em;color:#f4224b;text-transform:uppercase;outline:0;border-radius:50px;padding:.5em 2.5em .5em 2.5em;background-color:#ffd008;border:none;transition-duration:.2s;box-shadow:0 5px #f4224b;margin-top:20px;margin-bottom:0}.js-textareacopybtn:hover{cursor:pointer;background-color:#e3bd1b;transform:translateY(2.5px);box-shadow:0 2.5px #f4224b}.js-textareacopybtn:active{transform:translateY(5px);box-shadow:0 0 #f4224b}.btn{font-family:canaro-medium;cursor:pointer;display:inline-block;margin:10px 5px;vertical-align:middle;font-size:medium;font-weight:300}.button-container{margin:10px 0 1em 0;display:flex;justify-content:center;align-items:flex-start}@media (max-width:768px){.inner-container{width:100%;max-width:100%}.judul{font-size:30px}}.js-copytextarea{resize:none;padding:20px;font-family:canaro-medium;background:#ffd008;margin:5px 0 10px 0;text-align:left;width:100%;min-height:205px;overflow-y:auto;color:#1f2c4c;border-radius:25px;border:none;letter-spacing:1px;outline:0;transition-duration:.1s}.js-copytextarea:focus{box-shadow:0 10px 10px #262626}.footer{text-align:center}.MxmButton{font-family:canaro-bold;font-weight:900;font-size:1em;color:#f4224b;text-transform:uppercase;outline:0;border-radius:50px;padding:.5em 2.5em .5em 2.5em;background-color:#ffd008;border:none;transition-duration:.2s;box-shadow:0 5px #f4224b;margin-top:0;margin-bottom:0}.MxmButton:hover{cursor:pointer;background-color:#e3bd1b;transform:translateY(2.5px);box-shadow:0 2.5px #f4224b}.MxmButton:active{transform:translateY(5px);box-shadow:0 0 #f4224b}.MxmButton a{text-decoration:none;color:#f4224b}.MxmCancelButton{outline:0;font-family:canaro-medium;font-weight:900;font-size:1em;color:#f4224b;border-radius:50px;background-color:#fff;padding:.5em 2.5em .5em 2.5em;border:solid #f4224b;transition-duration:.2s}.MxmCancelButton:hover{background-color:#f4224b;color:#ffd008;cursor:pointer}.MxmCancelButton:active{background-color:#c41d3e;border-color:#c41d3e}.judul{color:#f4224b;font-size:46px;background-color:none}.left-line{border:4px solid #f4224b;width:50px;margin:0 15px 0 15px;border-top-right-radius:25px;border-bottom-left-radius:25px;background-color:#f4224b}.archi-tou-container{display:flex;flex-direction:row;justify-content:center;align-items:center}.right-line{border:4px solid #f4224b;width:50px;margin:0 15px 0 15px;border-top-left-radius:25px;border-bottom-right-radius:25px;background-color:#f4224b}.make-it-center{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 1.5em 15px 1.5em}
+@font-face {
+    font-family: canaro-bold;
+    src: url(../fonts/canaro_bold/CanaroW00-Bold.eot);
+    src: url(../fonts/canaro_bold/CanaroW00-Bold.woff) format("woff"), url(../fonts/canaro_bold/CanaroW00-Bold.ttf) format("truetype"), url(../fonts/canaro_bold/CanaroW00-Bold.svg) format("svg")
+}
+
+@font-face {
+    font-family: canaro-medium;
+    src: url(../fonts/canaro_medium/CanaroW00-Medium.eot);
+    src: url(../fonts/canaro_medium/CanaroW00-Medium.woff) format("woff"), url(../fonts/canaro_medium/CanaroW00-Medium.ttf) format("truetype"), url(../fonts/canaro_medium/CanaroW00-Medium.svg) format("svg")
+}
+
+body,
+html {
+    background-image: url(../images/maxima-bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: canaro-bold
+}
+
+canvas,
+img {
+    max-width: 100%;
+    height: auto !important;
+    margin: auto;
+}
+
+canvas {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+h2 {
+    font-size: 20px;
+    color: #1f2c4c;
+    font-family: canaro-medium
+}
+
+h3 {
+    font-size: 20px;
+    color: #fff;
+    font-family: canaro-medium;
+    border-radius: 45px;
+    background-color: #ed2d4f;
+    padding: 10px
+}
+
+.container {
+    padding: 45px 20px;
+    color: #fff
+}
+
+.inner-container {
+    max-width: 500px;
+    margin: auto;
+    text-align: center
+}
+
+#attachment {
+    display: none
+}
+
+.attachment label {
+    font-family: canaro-medium;
+    font-weight: 900;
+    box-sizing: border-box;
+    background-color: #ffd008;
+    border-radius: 50px;
+    transition-duration: .2s;
+    box-shadow: 0 5px #f4224b;
+    color: #f4224b;
+    font-size: medium;
+    padding: .5em 2.5em .5em 2.5em;
+    display: inline-block;
+    margin: 50px 0;
+    cursor: pointer
+}
+
+.attachment label:hover {
+    cursor: pointer;
+    background-color: #e3bd1b;
+    transform: translateY(2.5px);
+    box-shadow: 0 2.5px #f4224b
+}
+
+.attachment label:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #f4224b
+}
+
+.new-download {
+    display: none
+}
+
+.js-textareacopybtn {
+    font-family: canaro-medium;
+    font-weight: 900;
+    font-size: 1em;
+    color: #f4224b;
+    text-transform: uppercase;
+    outline: 0;
+    border-radius: 50px;
+    padding: .5em 2.5em .5em 2.5em;
+    background-color: #ffd008;
+    border: none;
+    transition-duration: .2s;
+    box-shadow: 0 5px #f4224b;
+    margin-top: 20px;
+    margin-bottom: 0
+}
+
+.js-textareacopybtn:hover {
+    cursor: pointer;
+    background-color: #e3bd1b;
+    transform: translateY(2.5px);
+    box-shadow: 0 2.5px #f4224b
+}
+
+.js-textareacopybtn:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #f4224b
+}
+
+.btn {
+    font-family: canaro-medium;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 5px;
+    vertical-align: middle;
+    font-size: medium;
+    font-weight: 300
+}
+
+.button-container {
+    margin: 10px 0 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start
+}
+
+@media (max-width:768px) {
+    .inner-container {
+        width: 100%;
+        max-width: 100%
+    }
+
+    .judul {
+        font-size: 30px
+    }
+}
+
+.js-copytextarea {
+    resize: none;
+    padding: 20px;
+    font-family: canaro-medium;
+    background: #ffd008;
+    margin: 5px 0 10px 0;
+    text-align: left;
+    width: 100%;
+    min-height: 205px;
+    overflow-y: auto;
+    color: #1f2c4c;
+    border-radius: 25px;
+    border: none;
+    letter-spacing: 1px;
+    outline: 0;
+    transition-duration: .1s
+}
+
+.js-copytextarea:focus {
+    box-shadow: 0 10px 10px #262626
+}
+
+.footer {
+    text-align: center
+}
+
+.MxmButton {
+    font-family: canaro-bold;
+    font-weight: 900;
+    font-size: 1em;
+    color: #f4224b;
+    text-transform: uppercase;
+    outline: 0;
+    border-radius: 50px;
+    padding: .5em 2.5em .5em 2.5em;
+    background-color: #ffd008;
+    border: none;
+    transition-duration: .2s;
+    box-shadow: 0 5px #f4224b;
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.MxmButton:hover {
+    cursor: pointer;
+    background-color: #e3bd1b;
+    transform: translateY(2.5px);
+    box-shadow: 0 2.5px #f4224b
+}
+
+.MxmButton:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 #f4224b
+}
+
+.MxmButton a {
+    text-decoration: none;
+    color: #f4224b
+}
+
+.MxmCancelButton {
+    outline: 0;
+    font-family: canaro-medium;
+    font-weight: 900;
+    font-size: 1em;
+    color: #f4224b;
+    border-radius: 50px;
+    background-color: #fff;
+    padding: .5em 2.5em .5em 2.5em;
+    border: solid #f4224b;
+    transition-duration: .2s
+}
+
+.MxmCancelButton:hover {
+    background-color: #f4224b;
+    color: #ffd008;
+    cursor: pointer
+}
+
+.MxmCancelButton:active {
+    background-color: #c41d3e;
+    border-color: #c41d3e
+}
+
+.judul {
+    color: #f4224b;
+    font-size: 46px;
+    background-color: none
+}
+
+.left-line {
+    border: 4px solid #f4224b;
+    width: 50px;
+    margin: 0 15px 0 15px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: #f4224b
+}
+
+.archi-tou-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.right-line {
+    border: 4px solid #f4224b;
+    width: 50px;
+    margin: 0 15px 0 15px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: #f4224b
+}
+
+.make-it-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5em 15px 1.5em
+}

@@ -54,6 +54,9 @@ app.get('/twibbon-organosi', (req, res) => {
 app.get('/twibbon-techni', (req, res) => {
   res.sendFile(`${__dirname}/public/techni.html`);
 });
+app.get('/maxitour', (req, res) => {
+  res.sendFile(`${__dirname}/public/maxitour.html`);
+});
 
 app.get('/:shortUrl', async (req, res) => {
   const { shortUrl } = req.params;
