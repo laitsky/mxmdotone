@@ -91,8 +91,7 @@
           </div>
           <div style="margin: 1em 0 1em 0">
             <button id="download_btn" class="MxmButton" hidden>
-              <a id="download_anchor" download="Twibbon_MAXIMA2020.png"
-                >Unduh!</a>
+              Unduh!
             </button>
           </div>
         </div>
@@ -188,9 +187,15 @@
                     document
                       .getElementById("download_btn")
                       .removeAttribute("hidden");
-                    document
-                      .getElementById("download_anchor")
-                      .setAttribute("href", save_img);
+                    // document
+                      // .getElementById("download_anchor")
+                      // .setAttribute("href", save_img);
+                    $("#download_btn").click(() => {
+                      const anchor = document.createElement('a');
+                      anchor.href = save_img;
+                      anchor.download = 'Twibbon_MAXIMA2020';
+                      anchor.click();
+                    })
                   };
                 });
                 $("#btnRestore").click(function () {
